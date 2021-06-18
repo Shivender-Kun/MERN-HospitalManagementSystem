@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Added } from "../Routes";
 import { useDispatch } from "react-redux";
@@ -11,6 +11,9 @@ export default function Signup() {
   const dispatch = useDispatch();
   const history = useHistory();
 
+  useEffect(() => {
+    setuserData({});
+  }, []);
   const handleSubmit = async (e) => {
     e.preventDefault();
 
