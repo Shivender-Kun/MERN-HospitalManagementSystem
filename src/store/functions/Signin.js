@@ -32,7 +32,7 @@ const state = async (dispatch, data) => {
     return err;
   }
 
-  const url = "http://localhost:4000/signin/";
+  const url = "https://hms-backend-server.herokuapp.com/signin/";
   const user = data.userType;
 
   try {

@@ -9,13 +9,13 @@ const fetchPatientsSuccess = createAction("Fetch_Patients_Success");
 
 const fetchPatientsFailure = createAction("Fetch_Patients_Failure");
 
-
-
 export const fetchPatients = () => {
   return async (dispatch) => {
     try {
       dispatch(fetchPatientsRequest());
-      const patients = await axios.get("http://localhost:4000/patients");
+      const patients = await axios.get(
+        "https://hms-backend-server.herokuapp.com/patients"
+      );
       dispatch(fetchPatientsSuccess(patients.data));
     } catch (error) {
       dispatch(fetchPatientsFailure(error.message));
@@ -49,4 +49,3 @@ export const patientReducer = createReducer(initialState, {
     state.message = action.payload.message;
   },
 });
-

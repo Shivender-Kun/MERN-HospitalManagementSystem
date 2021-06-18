@@ -14,7 +14,6 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import store from "./store/store";
 import { Provider } from "react-redux";
 import "./App.css";
-// import styles from "./Components/Navbar/styles";
 
 const App = () => {
   return (

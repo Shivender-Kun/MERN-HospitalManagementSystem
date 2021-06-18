@@ -7,7 +7,7 @@ import { useHistory } from "react-router-dom";
 export default function Signup() {
   const [userData, setuserData] = useState({});
   const [user, setuser] = useState("patient");
-  const url = `http://localhost:4000/signup?user=`;
+  const url = `https://hms-backend-server.herokuapp.com/signup?user=`;
   const dispatch = useDispatch();
   const history = useHistory();
 

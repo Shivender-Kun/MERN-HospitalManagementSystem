@@ -1,5 +1,4 @@
 import axios from "axios";
-import "./Appointment.css";
 import React, { useState } from "react";
 import { Updated, SignIn } from "../SubComponents";
 import { useHistory } from "react-router-dom";
@@ -8,7 +7,7 @@ import { useSelector, useDispatch } from "react-redux";
 const Appointment = () => {
   const [description, setdescription] = useState("");
   const [toggleForm, settoggleForm] = useState(false);
-  const url = `http://localhost:4000/`;
+  const url = `https://hms-backend-server.herokuapp.com/`;
   const history = useHistory();
 
   const userName = useSelector(

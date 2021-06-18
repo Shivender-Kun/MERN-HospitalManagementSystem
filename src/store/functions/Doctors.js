@@ -13,7 +13,9 @@ export const fetchDoctors = () => {
   return async (dispatch) => {
     dispatch(fetchDoctorsRequest());
     try {
-      const doctors = await axios.get("http://localhost:4000/doctors");
+      const doctors = await axios.get(
+        "https://hms-backend-server.herokuapp.com/doctors"
+      );
       dispatch(fetchDoctorsSuccess(doctors.data));
     } catch (error) {
       dispatch(fetchDoctorsFailure(error.message));

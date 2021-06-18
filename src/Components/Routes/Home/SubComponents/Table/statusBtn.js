@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { Updated } from "../../../Routes";
 
 function StatusBtn(data, user) {
-  const url = `http://localhost:4000/`;
+  const url = `https://hms-backend-server.herokuapp.com/`;
   const dispatch = useDispatch();
 
   const handleSubmit = async (e) => {

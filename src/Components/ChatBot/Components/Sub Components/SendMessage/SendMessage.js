@@ -17,7 +17,10 @@ function SendMessage({ user }) {
       message,
     };
 
-    const newMessage = await axios.post("http://localhost:4000/chat", data);
+    const newMessage = await axios.post(
+      "https://hms-backend-server.herokuapp.com/chat",
+      data
+    );
 
     setmessage("");
     dispatch(messageSent(data));
