@@ -25,7 +25,7 @@ app.use("/signin/:user", getOne);
 app.get("*", (req, res) => res.status(404).send("Page Not Found..."));
 
 // Defining the port variable.
-const Port = process.env.Port || 4000;
+const Port = process.env.PORT || 4000;
 
 // Starting the server.
 app.listen(Port, () => console.log(`Server listening on port ${Port}....`));
