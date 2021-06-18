@@ -1,0 +1,4 @@
+.routes:hover {
+  transition-duration: 300ms;
+  transform: scale(1.1);
+}

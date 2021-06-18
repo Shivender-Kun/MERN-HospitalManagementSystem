@@ -1,0 +1,95 @@
+/* CSS Color Variables */
+
+:root {
+  --bs-bg: #0d6efd;
+  --bs-indigo: #6610f2;
+  --bs-purple: #6f42c1;
+  --bs-pink: #d63384;
+  --bs-orange: #fd7e14;
+  --bs-teal: #20c997;
+  --bs-white: #fff;
+  --bs-gray: #6c757d;
+  --bs-gray-dark: #343a40;
+  --bs-primary: #0d6efd;
+  --bs-secondary: #6c757d;
+  --bs-success: #198754;
+  --bs-info: #0dcaf0;
+  --bs-warning: #ffc107;
+  --bs-danger: #dc3545;
+  --bs-light: #f8f9fa;
+  --bs-dark: #212529;
+}
+
+/* End */
+
+/* Fixed Components */
+
+.App {
+  width: 100%;
+  min-height: 100%;
+  background-color: var(--bs-light);
+}
+
+h1,
+h2 {
+  font-weight: 600;
+}
+
+/* End */
+
+/* App Components */
+
+.topPad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  position: relative;
+  top: 7vh;
+
+  background-color: var(--bs-gray-dark);
+  min-height: 93vh;
+}
+
+.appBody {
+  width: 90vw;
+  height: 100%;
+  background-color: var(--bs-light);
+  padding: 2vw !important;
+  min-height: 87vh;
+}
+
+@media (min-width: 500px) {
+  .appBody {
+    width: 60vw;
+  }
+}
+
+/* End */
+
+/* Form Styles */
+
+.form-group {
+  text-align: left;
+  font-size: 1.1rem;
+}
+
+#regForm {
+  margin-top: 10px;
+}
+
+#form-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+/* End */
+
+@media (max-width: 500px) {
+  .appBody {
+    width: 90vw !important;
+  }
+}

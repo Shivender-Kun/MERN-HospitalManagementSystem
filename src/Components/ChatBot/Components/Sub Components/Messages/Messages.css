@@ -1,0 +1,54 @@
+.messagesContainer::-webkit-scrollbar {
+  overflow-y: hidden;
+}
+
+.react-scroll-to-bottom--css-qyfry-1n7m0yu {
+  padding-top: 10px;
+}
+
+.messagesContainer {
+  overflow-x: auto;
+  margin-top: 20px;
+  border-radius: 10px;
+  height: 80%;
+}
+
+#parent-msg-container {
+  display: flex;
+}
+
+.Left {
+  justify-content: flex-start;
+  margin-left: 10px;
+}
+
+.Right {
+  justify-content: flex-end;
+  margin-right: 10px;
+}
+
+#messageContainer {
+  max-width: 70%;
+  border: 1px solid;
+
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  background-color: bisque;
+  color: black;
+}
+
+.user {
+  font-weight: bold;
+}
+
+.You {
+  border-radius: 10px 10px 10px 0px;
+}
+
+.Other {
+  border-radius: 10px 10px 0px 10px;
+}
+
+.p {
+  white-space: pre-wrap;
+}
