@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import { DB_Connect, User, addUser, getOne, ChatBot } from "./indexing.js";
+import { DB_Connect, User, addUser, getOne, ChatBot } from "./src/indexing.js";
 
 const app = express();
 
