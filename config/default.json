@@ -1,0 +1,5 @@
+{
+  "mongoURILocal": "mongodb://localhost:27017/HMS",
+  "jwtSecret": "Hospital Management System",
+  "mongoURI": "mongodb+srv://admin:admin123@cluster0.9m76m.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+}

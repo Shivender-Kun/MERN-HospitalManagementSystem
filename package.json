@@ -1,0 +1,38 @@
+{
+  "name": "hms-backend-db",
+  "version": "1.0.0",
+  "description": "Connects to the backend database used by Hospital Management Systems's frontend ( Details of Doctors and Patients ).",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src\\index.js",
+    "dev": "nodemon src\\index.js"
+  },
+  "keywords": [
+    "hospital",
+    "management",
+    "system",
+    "node",
+    "js",
+    "express",
+    "js",
+    "mongodb",
+    "mongoose",
+    "database"
+  ],
+  "author": "Shiv",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/dialogflow": "^4.1.0",
+    "bcrypt": "^5.0.1",
+    "config": "^3.3.6",
+    "cors": "^2.8.5",
+    "dialogflow": "^4.0.3",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.6.5",
+    "mongoose": "^5.12.3",
+    "pug": "^3.0.2",
+    "uuid": "^8.3.2"
+  }
+}
