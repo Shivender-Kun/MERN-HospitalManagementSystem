@@ -47,7 +47,7 @@ const state = async (dispatch, data) => {
       return;
     }
 
-    const url = "https://hms-backend-server.herokuapp.com/signin";
+    const url = "https://hms-backend-server.herokuapp.com/signin/";
     const user = data.userType;
 
     if (user === "log out") {
