@@ -1,9 +1,13 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import female from "../../../../assets/doctor/female.png";
-import male from "../../../../assets/doctor/male.png";
+import femaledoc from "../../../../assets/doctor/female.png";
+import maledoc from "../../../../assets/doctor/male.png";
+import femalepat from "../../../../assets/patient/female.png";
+import malepat from "../../../../assets/patient/male.png";
+
 function UserCard() {
   const user = useSelector((state) => state.signInReducer.userData);
+  const userType = useSelector((state) => state.signInReducer.userSignedIn);
 
   return (
     <div>
@@ -13,7 +17,15 @@ function UserCard() {
           style={{ maxWidth: "fit-content" }}
         >
           <img
-            src={user.gender === "Male" ? male : female}
+            src={
+              user.gender === "Male"
+                ? userType === "doctor"
+                  ? maledoc
+                  : malepat
+                : userType === "patient"
+                ? femalepat
+                : femaledoc
+            }
             style={{ width: "50%" }}
             alt="Doctor"
           />

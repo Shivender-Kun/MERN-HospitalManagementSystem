@@ -9,6 +9,7 @@ export default function LogOut() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     dispatch(SignIn({ userType: "log out" }));
+    localStorage.removeItem("token");
     history.push("/signin");
   };
 
