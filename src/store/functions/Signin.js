@@ -85,6 +85,7 @@ const initialState = {
 
 export const signInReducer = createReducer(initialState, {
   DoctorSignedIn: (state, action) => {
+    console.log(action.payload);
     state.token = action.payload.token;
     state.userSignedIn = "doctor";
     state.userData = action.payload[0];
