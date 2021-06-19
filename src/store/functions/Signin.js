@@ -26,7 +26,7 @@ export const SignIn = (data) => {
 const state = async (dispatch, data) => {
   try {
     if (data.token) {
-      const url = "https://hms-backend-server.herokuapp.com/auth/";
+      const url = "https://hms-backend-server.herokuapp.com/auth";
       let config = {
         headers: {
           "x-auth-token": data.token,
@@ -47,7 +47,7 @@ const state = async (dispatch, data) => {
       return;
     }
 
-    const url = "https://hms-backend-server.herokuapp.com/signin/";
+    const url = "https://hms-backend-server.herokuapp.com/signin";
     const user = data.userType;
 
     if (user === "log out") {

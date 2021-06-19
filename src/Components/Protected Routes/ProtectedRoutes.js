@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Route } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { AdminUser, DoctorUser, PatientUser, Home } from "../Routes/Routes";
+import { AdminUser, DoctorUser, PatientUser } from "../Routes/Routes";
 
 function ProtectedRoutes() {
   const [component, setcomp] = useState(undefined);
