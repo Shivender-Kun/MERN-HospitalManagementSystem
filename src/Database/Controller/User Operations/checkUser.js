@@ -11,11 +11,11 @@ const checkUser = async (user, userName, password) => {
 const getOneUser = async (user, userName) => {
   let show;
   if (user === "admin") {
-    show = await Admin.find({ userName }).select(["-_id", "-__v"]);
+    show = await Admin.find({ userName }).select(["-__v"]);
   } else if (user === "doctor") {
-    show = await Doctor.find({ userName }).select(["-_id", "-__v"]);
+    show = await Doctor.find({ userName }).select(["-__v"]);
   } else if (user === "patient") {
-    show = await Patient.find({ userName }).select(["-_id", "-__v"]);
+    show = await Patient.find({ userName }).select(["-__v"]);
   }
   return show;
 };
