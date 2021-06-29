@@ -1,4 +1,5 @@
 import checkUser from "./checkUser.js";
+import config from "config";
 import jwt from "jsonwebtoken";
 const getOne = async (req, res) => {
   try {
@@ -6,14 +7,25 @@ const getOne = async (req, res) => {
     const { userName, password } = req.body;
     const userAuth = await checkUser(user, userName, password);
     userAuth[0].password = "protected";
-    userAuth
-      ? res.status(200).json({
+
+    jwt.sign(
+      {
+        id: userAuth[0]._id,
+        user,
+      },
+      config.get("jwtSecret"),
+      // { expiresIn: 3600 },
+      (err, token) => {
+        if (err) throw err;
+        res.status(200).json({
+          token,
           message: "success",
           ...userAuth,
-        })
-      : res.status(404).json({ message: "failed1" });
+        });
+      }
+    );
   } catch (error) {
-    res.status(400).json(error);
+    res.status(400).json({ error: error });
   }
 };
 

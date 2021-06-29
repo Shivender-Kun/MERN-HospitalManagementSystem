@@ -5,6 +5,9 @@ import Admin from "../Models/Admin.js";
 import bookAppointment from "./User Operations/Appointment.js";
 import getUser from "./User Operations/GetUser.js";
 import addUser from "./User Operations/AddUser.js";
+
+import getUser from "./User Operations/GetUser.js";
+import addUser from "./User Operations/AddUser.js";
 import getOne from "./User Operations/GetOne.js";
 import status from "./User Operations/Status.js";
 
