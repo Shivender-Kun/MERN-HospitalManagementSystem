@@ -1,10 +1,21 @@
-import React from "react";
-import "./User.css";
-import { useSelector } from "react-redux";
 import { UserCard, LogOut } from "../Routes";
+import { useSelector } from "react-redux";
+import React, { useEffect } from "react";
+import "./User.css";
 
 function User() {
   const user = useSelector((state) => state.signInReducer.userData);
+  const token = useSelector((state) => state.signInReducer.token);
+
+  useEffect(() => {
+    try {
+      const oldToken = localStorage.getItem("token");
+      if ((!oldToken && token) || (oldToken !== token && token))
+        localStorage.setItem("token", token);
+    } catch (error) {
+      console.log(error);
+    }
+  }, [token]);
 
   return (
     <div className="UserData">

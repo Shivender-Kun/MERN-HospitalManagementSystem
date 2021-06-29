@@ -1,8 +1,20 @@
-import "./Admin.css";
-import React from "react";
 import { Doctors, Patients, LogOut } from "../../Routes";
+import { useSelector } from "react-redux";
+import React, { useEffect } from "react";
+import "./Admin.css";
 
 const Admin = () => {
+  const token = useSelector((state) => state.signInReducer.token);
+
+  useEffect(() => {
+    try {
+      const oldToken = localStorage.getItem("token");
+      if ((!oldToken && token) || (oldToken !== token && token))
+        localStorage.setItem("token", token);
+    } catch (error) {
+      console.log(error);
+    }
+  }, [token]);
   return (
     <div id="Admin">
       <h2>Admin Area</h2>
