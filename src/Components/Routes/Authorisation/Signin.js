@@ -18,7 +18,7 @@ export default function Signin() {
 
   useEffect(() => {
     if (signIn.userSignedIn !== "") {
-      setwrong(false)
+      setwrong(false);
       history.push("/myaccount");
     }
     if (signIn.signInFailed !== "") {
