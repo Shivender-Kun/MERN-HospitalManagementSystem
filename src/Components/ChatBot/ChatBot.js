@@ -14,7 +14,7 @@ function ChatBot() {
   };
 
   return (
-    <div className="chat-bot" style={styles.chatbot}>
+    <div className="chatbot-container">
       {chatbot ? (
         <div id="ChatBot" className="bg-dark">
           <div className="min" onClick={handleClick}>
@@ -25,6 +25,7 @@ function ChatBot() {
         </div>
       ) : (
         <img
+          id="bot-img"
           src="https://img.icons8.com/dusk/64/000000/bot--v2.png"
           alt="Bot"
           onClick={handleClick}
@@ -35,13 +36,3 @@ function ChatBot() {
 }
 
 export default ChatBot;
-
-const styles = {
-  chatbot: {
-    position: "fixed",
-    float: "right",
-    border: "2px solid",
-    bottom: "6%",
-    left: "69%",
-  },
-};
